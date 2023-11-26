@@ -5,7 +5,7 @@ You have to have :
 - Visual studio code
 - CodeJS
 
-On the terminal of Visual studio plus, you need to do the commands :
+On the terminal of Visual studio Code, you need to do the commands :
 
 - npm init
 - npm install discord.js 
