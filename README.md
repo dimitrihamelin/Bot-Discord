@@ -1,6 +1,6 @@
 # discord_bot
 Version 1.0 
-You have to have somme packets :
+You have to have :
 
 - Visual studio plus
 - CodeJS
