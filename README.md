@@ -11,4 +11,4 @@ On the terminal of Visual studio Code, you need to do the commands :
 - npm init
 - npm install discord.js 
 
-  
+Version discord.js@12
