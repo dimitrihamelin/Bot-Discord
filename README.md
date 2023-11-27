@@ -1,5 +1,5 @@
 # discord_bot
-Version 1.4
+Version 1.5
 
 You have to have :
 
@@ -11,4 +11,4 @@ On the terminal of Visual studio Code, you need to do the commands :
 - npm init
 - npm install discord.js 
 
-Version discord.js@12
+Version discord.js@latest (2023)
