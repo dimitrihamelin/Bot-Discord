@@ -1,5 +1,6 @@
 # discord_bot
-Version 1.0 
+Version 1.4
+
 You have to have :
 
 - Visual studio code
