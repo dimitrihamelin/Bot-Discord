@@ -1,5 +1,5 @@
 # discord_bot
-Version 1.7
+Version 1.8
 
 You have to have :
 
