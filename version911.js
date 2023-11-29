@@ -162,4 +162,23 @@ client.on('interactionCreate', async (interaction) => {
     // Ajoutez d'autres conditions pour chaque commande slash supplémentaire ici...
 });
 
+{
+  "token": "",
+  "logs": "",
+  "welcome": "",
+  "farewell": "",
+  "cmd-bot": "",
+  "cmd-bot2": "",
+  "cmd-bot3": "",
+  "cmd-bot4": "",
+  "contact": "",
+  "contact2": "",
+  "contact3": "",
+  "contact4": "",
+  "contact5":"",
+  "contact6": "",
+  "staffRole": "",
+  "membre": ""
+}
+
 client.login(token);
