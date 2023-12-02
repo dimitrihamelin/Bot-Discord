@@ -15,6 +15,6 @@ Prepare to forge your Discord bot environment by executing the following command
 ```bash
 npm init -y
 npm install discord.js@latest
+```
 
-
-Feel free to adjust the language or content to better suit the tone and style you prefer for your Discord Bot documentation.
+Please feel free to modify the language or content to better align with the tone and style that best suits your preferences for documenting your Discord Bot.
