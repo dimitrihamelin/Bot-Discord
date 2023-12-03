@@ -15,6 +15,7 @@ Prepare to forge your Discord bot environment by executing the following command
 ```bash
 npm init -y
 npm install discord.js@latest
+npm install croxydb
 ```
 
 Please feel free to modify the language or content to better align with the tone and style that best suits your preferences for documenting your Discord Bot.
