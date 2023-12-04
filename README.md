@@ -1,6 +1,6 @@
 # 🚀 Discord Bot Latest Version : 1.9.7
 
-Welcome to the frontier of Discord Bot development with version 15 — your gateway to crafting an unparalleled and feature-rich bot for Discord communities! Embark on this exhilarating journey by ensuring that you have the following prerequisites in place:
+Welcome to the frontier of Discord Bot development with version 17 — your gateway to crafting an unparalleled and feature-rich bot for Discord communities! Embark on this exhilarating journey by ensuring that you have the following prerequisites in place:
 
 ## 🛠️ Prerequisites
 
