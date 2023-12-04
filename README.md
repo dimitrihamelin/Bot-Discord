@@ -1,4 +1,4 @@
-# 🚀 Discord Bot Latest Version : 9.1.5
+# 🚀 Discord Bot Latest Version : 9.1.6
 
 Welcome to the frontier of Discord Bot development with version 15 — your gateway to crafting an unparalleled and feature-rich bot for Discord communities! Embark on this exhilarating journey by ensuring that you have the following prerequisites in place:
 
@@ -16,6 +16,10 @@ Prepare to forge your Discord bot environment by executing the following command
 npm init -y
 npm install discord.js@latest
 npm install croxydb
+brew install ffmpeg (mac os)
+sudo apt-get update (ubuntu & debian)
+sudo apt-get install ffmpeg (ubuton & debian)
+brew install ffmpeg
 ```
 
 Please feel free to modify the language or content to better align with the tone and style that best suits your preferences for documenting your Discord Bot.
