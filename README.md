@@ -2,6 +2,19 @@
 
 Welcome to the frontier of Discord Bot development with version 17 — your gateway to crafting an unparalleled and feature-rich bot for Discord communities! Embark on this exhilarating journey by ensuring that you have the following prerequisites in place : 
 
+## 🚦 Bot Features
+
+Unlock the power of emotions with your Discord bot! Here are some key characteristics:
+
+| Feature           | Description                                                                        |
+| ----------------- | ---------------------------------------------------------------------------------- |
+| 🎵 **Music Bot**   | Host your own music or enjoy 24/7 radio streaming.                                   |
+| 👥 **Member Count**| Keep track of your community's growth by counting members.                            |
+| 📊 **Language Support** | Host your bot in up to 3 languages for a global reach.                             |
+
+Feel free to modify the language or content to better align with the tone and style that best suits your preferences for documenting your Discord Bot.
+
+
 ## 🛠️ Prerequisites
 
 - **Visual Studio Code**: Transform your coding experience into a sanctuary of creativity. If you haven't already, download and set up Visual Studio Code to unlock the full potential of your development environment.
@@ -26,4 +39,4 @@ brew install ffmpeg
 ```
 
 Please feel free to modify the language or content to better align with the tone and style that best suits your preferences for documenting your Discord Bot.
-Also, the you can host 3 times your bot so you will have the langages. Also, you need to know that you can host your own musics or see radio. 
+Also, the you can host 3 times your bot so you will have the langages. Also, you need to know that you can host your own musics or see radio. Count Members. 
