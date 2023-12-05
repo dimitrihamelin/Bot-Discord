@@ -1,12 +1,12 @@
 {
-"Channel":"1128669784456822856",
-"roleStaff":"1132313552443682868",
-"log":"1180264438432022569",
-"welcome":"1128422919895257198",
-"farewell": "1180991368722645082",
-"SERVER": "834895609622167592", 
+"Channel":"",
+"roleStaff":"",
+"log":"",
+"welcome":"",
+"farewell": "",
+"SERVER": "", 
 "STATUS": "",
 "LIVE": "", 
-"Token": "MTEzMjQzMTMyODMyODAzNjQ0Mg.GXYJ4N.cOVHXwKLHsrOfYXLnHherNJTh7dxYNObva9p4Q",
+"Token": "",
 "prefix": "!"
 }
