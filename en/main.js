@@ -6,6 +6,8 @@ let {log, roleStaff, welcome, farewell, STATUS, Token} = require("./config.json"
 let db = require("croxydb")
 const ffmpegStatic = require('ffmpeg-static');
 const play = require('play-dl');
+const fs = require('fs');
+const { StreamType } = require('@discordjs/voice');
 const https = require('https');
 require('dotenv').config();
 const FFmpeg = require('/Users/dimitri/Desktop/Locarodix/Code/Bot/en/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly
@@ -431,7 +433,48 @@ const modal = new ModalBuilder()
 			  
 				  const query = args.join(' ');
 				  await playYouTubeVideo(query, connection, message);
+				
+				} else if (command === 'local') {
+					const voiceChannel = message.member.voice.channel;
+					if (!voiceChannel) {
+						return message.reply('Rejoins d\'abord un canal vocal.');
+					}
+				
+					const connection = await joinVoiceChannel({
+						channelId: voiceChannel.id,
+						guildId: message.guild.id,
+						adapterCreator: message.guild.voiceAdapterCreator,
+					});
+				
+					try {
+						const filePath = '/Users/dimitri/Desktop/Locarodix/Code/Bot/test.mp3'; // Remplacez cela par le chemin de votre fichier audio local
+						const stream = fs.createReadStream(filePath);
+						const resource = createAudioResource(stream, { inputType: StreamType.Arbitrary });
+					
+						const player = createAudioPlayer();
+						const connection = joinVoiceChannel({
+							channelId: message.member.voice.channel.id,
+							guildId: message.guild.id,
+							adapterCreator: message.guild.voiceAdapterCreator,
+						});
+					
+						player.play(resource);
+					
+						player.on(AudioPlayerStatus.Idle, () => {
+							// Quand la lecture est terminée, relancez le fichier audio
+							player.play(resource);
+						});
+					
+						connection.subscribe(player);
+						message.reply('Lecture du fichier audio local.');
+					} catch (err) {
+						console.error(err);
+						message.reply('Erreur lors de la lecture du fichier audio local.');
+					}
+					
 				}
+		
+
 			  });
 			  
 			  async function playYouTubeVideo(query, connection, message) {
@@ -495,6 +538,14 @@ const modal = new ModalBuilder()
 					  message.reply('Radio :(');
 				  }
 			  }
+
+			  client.on('ready', () => {
+				setInterval(() => {
+				  const serverOne = client.guilds.cache.get('834895609622167592');
+				  const channelOne = serverOne.channels.cache.get('1181732852849709220');
+				  channelOne.setName(`📊｜Members - ` + serverOne.memberCount, 'AutoMemberCount')
+				}, 10000);
+			  })
 			  
 
 
