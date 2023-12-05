@@ -8,7 +8,7 @@ Welcome to the frontier of Discord Bot development with version 17 — your gate
 
 - **CodeJS**: Elevate your Discord bot development to new heights. Seamlessly integrate CodeJS into your Visual Studio Code environment for an unparalleled and streamlined coding experience.
 
-- **brew**: To download the YouTube links and Radio 24h/24
+- **brew**: To download the YouTube links and Radio 24h/24 - Or your own radio
 
 
 ## ⚙️ Setup Commands
