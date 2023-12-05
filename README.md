@@ -4,7 +4,7 @@ Welcome to the frontier of Discord Bot development with version 17 — your gate
 
 ## 🚦 Bot Features
 
-Unlock the power of emotions with your Discord bot! Here are some key characteristics:
+Unlock the power of emotions with your Discord bot! Here are some key characteristics :
 
 | Feature           | Description                   | Version Discord tested |
 | ----------------- | ----------------------------- | ------- |
