@@ -8,9 +8,9 @@ Unlock the power of emotions with your Discord bot! Here are some key characteri
 
 | Feature           | Description                                                                        |
 | ----------------- | ---------------------------------------------------------------------------------- |
-| 🎵 **Music Bot**   | Host your own music or enjoy 24/7 radio streaming.                                   |
-| 👥 **Member Count**| Keep track of your community's growth by counting members.                            |
-| 📊 **Language Support** | Host your bot in up to 3 languages for a global reach.                             |
+| 🎵 **Music Bot**   | ✅                                  |
+| 👥 **Member Count**| ✅                           |
+| 📊 **Language Support** | ✅                            |
 
 Feel free to modify the language or content to better align with the tone and style that best suits your preferences for documenting your Discord Bot.
 
