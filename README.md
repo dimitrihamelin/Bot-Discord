@@ -1,6 +1,6 @@
 # 🚀 Discord Bot Latest Version : 1.9.8
 
-Welcome to the frontier of Discord Bot development with version 17 — your gateway to crafting an unparalleled and feature-rich bot for Discord communities! Embark on this exhilarating journey by ensuring that you have the following prerequisites in place:
+Welcome to the frontier of Discord Bot development with version 17 — your gateway to crafting an unparalleled and feature-rich bot for Discord communities! Embark on this exhilarating journey by ensuring that you have the following prerequisites in place : 
 
 ## 🛠️ Prerequisites
 
@@ -26,3 +26,4 @@ brew install ffmpeg
 ```
 
 Please feel free to modify the language or content to better align with the tone and style that best suits your preferences for documenting your Discord Bot.
+Also, the you can host 3 times your bot so you will have the langages. Also, you need to know that you can host your own musics or see radio. 
