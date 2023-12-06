@@ -7,7 +7,7 @@ Welcome to the frontier of Discord Bot development with version 17 — your gate
 Unlock the power of emotions with your Discord bot! Here are some key characteristics :
 
 |      Feature       |          Description           | Version Discord tested | Works |
-|------------------|-----------------------------|-------|:----:|
+|------------------|-----------------------------|-------|----:|
 | 🎵 **Music Bot**   | Host your own music or enjoy 24/7 radio streaming. |   14   |  ✅  |
 | 👥 **Member Count**| Keep track of your community's growth by counting members. |   14   |  ✅  |
 | 📊 **Commands slashs** | Host your bot in up to 3 languages for a global reach. |   14   |  ✅  |
