@@ -9,7 +9,7 @@ Unlock the power of emotions with your Discord bot! Here are some key characteri
 |      Feature       |          Description           | Version Discord tested | Works |
 |:------------------:|:-----------------------------:|:-------:|:----:|
 | 🎵 **Mutliple Music**   | Host your own music or enjoy 24/7 radio streaming. |   14   |  ✅  |
-| 👥 **Member Count**| Keep track of your community's growth by counting members. |   14   |  ✅  |
+| 👥 **Members Counts**| Keep track of your community's growth by counting members. |   14   |  ✅  |
 | 📊 **Commands slashs** | Host your bot in up to 3 languages for a global reach. |   14   |  ❌  |
 | 🌐 **Language Support** | Expand your bot's reach with up to 3 languages. |   14   |  ✅  |
 | 👋 **Welcome** | Greet new members in multiple languages. |   14   |  ✅  |
