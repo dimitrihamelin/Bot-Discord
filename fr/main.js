@@ -349,38 +349,21 @@ const modal = new ModalBuilder()
 				}
 			});
 
-			client.on('interactionCreate', async (interaction) => {
-				if (!interaction) return;
-			
-				if (!interaction.isCommand()) return;
-			
-				const { commandName } = interaction;
-			
-				if (commandName === 'ping') {
-					await interaction.reply('Pong!');
-				} else if (commandName === 'help') {
-					await interaction.reply('**Aide Joueur :** Aucune commande - **Aide Staff :** /clear (nombre de message)');
-				}
-				// Ajoutez d'autres conditions pour chaque commande slash supplémentaire ici...
-			});
-
-
 			let prefix= "!"
     
-// Your command handling logic
-client.on('messageCreate', (message) => {
-    // Check if the message starts with the command and the user has the specified role
-    if (message.content.startsWith(`${prefix}yourCommand`)) {
-        // Check if the user has the specified role
-        if (message.member.roles.cache.has('1128408743646871715')) {
-            // User has the role, allow the command
-            // Your command logic here
-        } else {
-            // User doesn't have the role, send a message indicating the restriction
-            message.reply("You don't have the required role to use this command.");
-        }
-    }
-});
+			client.on('messageCreate', (message) => {
+				// Check if the message starts with the command and the user has the specified role
+				if (message.content.startsWith(`${prefix}yourCommand`)) {
+					// Check if the user has the specified role
+					if (message.member.roles.cache.has('1128408743646871715')) {
+						// User has the role, allow the command
+						// Your command logic here
+					} else {
+						// User doesn't have the role, send a message indicating the restriction
+						message.reply("You don't have the required role to use this command.");
+					}
+				}
+			});
 
 
 			client.on('messageCreate', async (message) => {
