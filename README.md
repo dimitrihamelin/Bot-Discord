@@ -10,13 +10,13 @@ Unlock the power of emotions with your Discord bot! Here are some key characteri
 |:------------------:|:-----------------------------:|:-------:|:----:|
 | 🎵 **Music Bot**   | Host your own music or enjoy 24/7 radio streaming. |   14   |  ✅  |
 | 👥 **Member Count**| Keep track of your community's growth by counting members. |   14   |  ✅  |
-| 📊 **Commands slashs** | Host your bot in up to 3 languages for a global reach. |   14   |  ✅  |
+| 📊 **Commands slashs** | Host your bot in up to 3 languages for a global reach. |   14   |  ❌  |
 | 🌐 **Language Support** | Expand your bot's reach with up to 3 languages. |   14   |  ✅  |
 | 👋 **Welcome** | Greet new members in multiple languages. |   14   |  ✅  |
 | 👋 **Farewell** | Bid farewell to leaving members globally. |   14   |  ✅  |
 | 📻 **Multiple Radios** | Tune in to various radio stations with your bot. |   14   |  ✅  |
 | 🗑️ **Clear Command** | Manage clutter with a command to clear messages. |   14   |  ✅  |
-| ❓ **Custom Help Command** | Provide assistance in up to 3 languages. |   14   |  ✅  |
+| ❓ **Custom Help Command** | Provide assistance in up to 3 languages. |   14   |  ❌  |
 
 
 Feel free to modify the language or content to better align with the tone and style that best suits your preferences for documenting your Discord Bot.
