@@ -366,6 +366,20 @@ const modal = new ModalBuilder()
 				// Ajoutez d'autres conditions pour chaque commande slash supplémentaire ici...
 			});
 
+			client.on('messageCreate', (message) => {
+				// Check if the message starts with the command and the user has the specified role
+				if (message.content.startsWith(`${prefix}yourCommand`)) {
+					// Check if the user has the specified role
+					if (message.member.roles.cache.has('1128408743646871715')) {
+						// User has the role, allow the command
+						// Your command logic here
+					} else {
+						// User doesn't have the role, send a message indicating the restriction
+						message.reply("You don't have the required role to use this command.");
+					}
+				}
+			});
+
 			client.on('messageCreate', async (message) => {
 				if (message.author.bot) return;
 				if (!message.content.startsWith(prefix)) return;
