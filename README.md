@@ -43,6 +43,7 @@ brew install ffmpeg (mac os)
 sudo apt-get update (ubuntu & debian)
 sudo apt-get install ffmpeg (ubuton & debian)
 brew install ffmpeg
+npm install prism-media
 ```
 
 Please feel free to modify the language or content to better align with the tone and style that best suits your preferences for documenting your Discord Bot.
