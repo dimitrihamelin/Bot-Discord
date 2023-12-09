@@ -1,6 +1,7 @@
 {
 "Channel":"",
 "roleStaff":"",
+"rolebot": "",
 "log":"",
 "welcome":"",
 "farewell": "",
@@ -8,5 +9,5 @@
 "STATUS": "",
 "LIVE": "", 
 "Token": "",
-"prefix": "!"
+"predix": "!"
 }
