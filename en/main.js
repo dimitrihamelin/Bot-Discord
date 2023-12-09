@@ -2,19 +2,18 @@ let { GatewayIntentBits , Client , Collection, InteractionType ,ModalBuilder, St
 let { readdirSync } = require("fs")
 let IncludedIntents = Object.entries(GatewayIntentBits).reduce((t, [, V]) => t | V, 0)
 let client = new Client({ intents: IncludedIntents })
-let {log, roleStaff, welcome, farewell, STATUS, Token} = require("./config.json")
+let {log, roleStaff, rolebot, welcome, farewell, STATUS, Token} = require("./config.json")
 let db = require("croxydb")
 const ffmpegStatic = require('ffmpeg-static');
 const play = require('play-dl');
+const https = require('https');
 const fs = require('fs');
 const { StreamType } = require('@discordjs/voice');
-const https = require('https');
 require('dotenv').config();
-const FFmpeg = require('/Users/dimitri/Desktop/Locarodix/Code/Bot/en/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly
+const FFmpeg = require('/Users/dimitrihamelin/Desktop/Locarodix/Code/Bot/en/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly
 
-client.login(Token).then(console.log("Support En qui marche")).catch((err) => {console.log("Problème EN")})
+client.login(Token).then(console.log("Support EN qui marche")).catch((err) => {console.log("Problème EN")})
 
-prefix = "!"
 
 
 let eventFiles = readdirSync('./Client').filter(file => file.endsWith('.js'));
@@ -35,11 +34,11 @@ const modal = new ModalBuilder()
 	.setTitle('Support | Locarodix Team')
 	  const a1 = new TextInputBuilder()
 	  .setCustomId("reason")
-	  .setLabel('Oppen a ticket')
+	  .setLabel('Ouvrir un ticket')
 	  .setStyle(TextInputStyle.Paragraph) 
 	
 	  .setMinLength(2)
-	  .setPlaceholder('What do you want some help ?')
+	  .setPlaceholder('Pourquoi vouloir créer un ticket ?')
 	  .setRequired(true)
 	  const row = new ActionRowBuilder().addComponents(a1);
 	  
@@ -104,14 +103,14 @@ const modal = new ModalBuilder()
       .setPlaceholder('Ticket Menu!')
       .addOptions([
       {
-      label: 'Delete the ticket',
-      description: 'Delete the channel.',
+      label: 'Supprimer le Ticket',
+      description: 'Supprime le canal.',
       emoji: "🗑",
       value: 'delete',
       },
       {
       label: "Panel",
-      description: "Add or erase members.",
+      description: "Ajouter ou enlever des membres au salon.",
       emoji: "👤",
       value: "panel"
       
@@ -125,7 +124,7 @@ const modal = new ModalBuilder()
 				  interaction.guild.channels.create({
 				  name: `ticket-${interaction.user.username}-${data}`,
 					type: ChannelType.GuildText,
-					parent: "1128728666944311388",
+					parent: "1182798249199943851",
 			
 					permissionOverwrites: [
 					  {   
@@ -139,8 +138,13 @@ const modal = new ModalBuilder()
 					  {
 						  id: roleStaff,
 						  allow: [PermissionsBitField.Flags.ViewChannel]
-					  }
+					  },
+					  {
+					  	 id: rolebot,
+					  		allow: [PermissionsBitField.Flags.ViewChannel]
+					  },
 				  ]
+
 				})
 				
 					  
@@ -148,10 +152,10 @@ const modal = new ModalBuilder()
 					 
 						  const i1 = new EmbedBuilder()
 						  .setTitle('Gestionnaire de ticket')
-						  .setDescription(`**The utilisator create a room with the reason : ** \`${Reason}\` \n\n **Did by :** ${interaction.user}`)
+						  .setDescription(`**Un utilisateur a créé une salle pour la raison : ** \`${Reason}\` \n\n **Fait par :** ${interaction.user}`)
 						  .setColor("Gold")
 						  c.send({embeds: [i1], content: `<@&${roleStaff}> | ${interaction.user}`, components: [row]})
-						  interaction.reply({content: `Your ticket is open with the id : <#${c.id}>.`, ephemeral: true})
+						  interaction.reply({content: `Votre ticket est ouvert dans le canal <#${c.id}>.`, ephemeral: true})
 					  })
 			  
 			  }
@@ -180,8 +184,8 @@ const modal = new ModalBuilder()
 	.setCustomId("sil")
 	)
 	const embed = new EmbedBuilder()
-	.setTitle("View : Member")
-	.setDescription("**You can add or remove members !**")
+	.setTitle("Vue : Membre")
+	.setDescription("**Vous pouvez enlever ou rajouter des membres avec les intéractions des émoticônes !**")
 	.setColor("Random")
 	let message = await interaction.channel.messages.fetch(interaction.message.id)
 	await message.edit({embeds: [embed], components: [row2]})
@@ -197,7 +201,7 @@ const modal = new ModalBuilder()
 					  id, {ViewChannel: true}
 					  
 					  )
-					  interaction.reply({content: `🔔 <@${id}> add a ticket !`})
+					  interaction.reply({content: `🔔 <@${id}> ajoute un ticket !`})
 					} else {
 					
 			  }
@@ -211,7 +215,7 @@ const modal = new ModalBuilder()
 					  id, {ViewChannel: false}
 					  
 					  )
-					  interaction.reply({content: `🔔 <@${id}> delete the ticket !`})
+					  interaction.reply({content: `🔔 <@${id}> a supprimé le ticket !`})
 					} else {
 				   
 			  }
@@ -223,7 +227,7 @@ const modal = new ModalBuilder()
 				
 				  const channel = interaction.channel
 				  channel.delete();
-				  client.channels.cache.get(log).send(`🔔 <@${interaction.user.id}> finish the support : **${interaction.channel.name}** !`)
+				  client.channels.cache.get(log).send(`🔔 <@${interaction.user.id}> à terminé le support : **${interaction.channel.name}** !`)
 				
 			  }
 			}
@@ -246,7 +250,11 @@ const modal = new ModalBuilder()
 				const args = message.content.slice(('' || '').length).trim().split(/ +/);
 				const command = args.shift().toLowerCase();
 			
-				if (command === '/clear' && (message.member.roles.cache.some(role => role.id === '1128408743646871715') || message.member.roles.cache.some(role => role.id === '1128411176963940503'))) {
+				// Définir les ID des salons autorisés
+				const allowedChannels = ['1128728125845557360', '1128824487656300546', '1128836553020559491']; // Remplacez ces ID par les ID de vos salons autorisés
+			
+				// Vérifier si la commande est exécutée dans un salon autorisé
+				if (command === '/clear' && allowedChannels.includes(message.channel.id) && (message.member.roles.cache.some(role => role.id === '1128408743646871715') || message.member.roles.cache.some(role => role.id === '1128411176963940503'))) {
 					const amount = parseInt(args[0]);
 			
 					if (isNaN(amount) || amount < 1 || amount > 100) {
@@ -289,6 +297,7 @@ const modal = new ModalBuilder()
 					}
 				}
 			
+			
 				// Vérifie si le message est "hello" (insensible à la casse)
 				if (message.content.toLowerCase() === 'hello') {
 					// Réagit au message avec un emoji (par exemple, 👋)
@@ -299,7 +308,7 @@ const modal = new ModalBuilder()
 						message.reply('Error adding reaction. Please try again later.');
 					}
 				}  
-				if (message.content.toLowerCase() === 'hi') {
+				if (message.content.toLowerCase() === 'bonjour') {
 					// Réagit au message avec un emoji (par exemple, 👋)
 					try {
 						await message.react('👋');
@@ -311,7 +320,7 @@ const modal = new ModalBuilder()
 				if (message.content.toLowerCase() === 'tg' || message.content.toLowerCase() === 'ftg' || message.content.toLowerCase() === 'ta geule') {
 					try {
 						await message.delete(); // Ajoutez les parenthèses ici
-						await message.author.send('Alert : Be patient !'); 
+						await message.author.send('Alerte : Soyez gentil !'); 
 					} catch (error) {
 						console.error('Erreur lors de l\'ajout de la réaction :', error);
 						message.reply('Error adding reaction. Please try again later.');
@@ -320,7 +329,7 @@ const modal = new ModalBuilder()
 				if (message.content.toLowerCase() === 'caca' ) {
 					try {
 						await message.delete(); // Ajoutez les parenthèses ici
-						await message.author.send('Alert : Be patient !'); 
+						await message.author.send('Alerte : Soyez Respectueux !'); 
 					} catch (error) {
 						console.error('Erreur lors de l\'ajout de la réaction :', error);
 						message.reply('Error adding reaction. Please try again later.');
@@ -334,7 +343,7 @@ const modal = new ModalBuilder()
 				const welcomeChannel = member.guild.channels.cache.get(welcome);
 			
 				if (welcomeChannel) {
-					welcomeChannel.send(`Welcome on locarodix ${member} !`);
+					welcomeChannel.send(`Bienvenue sur locarodix ${member} !`);
 				} else {
 					console.log("Impossible de trouver le salon de bienvenue dans le cache.");
 				}
@@ -344,27 +353,14 @@ const modal = new ModalBuilder()
 				const farewellChannel = member.guild.channels.cache.get(farewell);
 			
 				if (farewellChannel) {
-					farewellChannel.send(`Bye, ${member.user.tag}.`);
+					farewellChannel.send(`bye, ${member.user.tag}.`);
 				} else {
 					console.log("Impossible de trouver le salon d'au revoir dans le cache.");
 				}
-			});	
-
-			client.on('interactionCreate', async (interaction) => {
-				if (!interaction) return;
-			
-				if (!interaction.isCommand()) return;
-			
-				const { commandName } = interaction;
-			
-				if (commandName === 'ping') {
-					await interaction.reply('Pong!');
-				} else if (commandName === 'help') {
-					await interaction.reply('**Help Players :** Else - **Aide Staff :** /clear (number messages)');
-				}
-				// Ajoutez d'autres conditions pour chaque commande slash supplémentaire ici...
 			});
-					
+
+			let prefix= "/"
+    
 			client.on('messageCreate', (message) => {
 				// Check if the message starts with the command and the user has the specified role
 				if (message.content.startsWith(`${prefix}yourCommand`)) {
@@ -378,7 +374,8 @@ const modal = new ModalBuilder()
 					}
 				}
 			});
-			
+
+
 			client.on('messageCreate', async (message) => {
 				if (message.author.bot) return;
 				if (!message.content.startsWith(prefix)) return;
@@ -406,7 +403,7 @@ const modal = new ModalBuilder()
 			  
 				  const voiceChannel = message.member.voice.channel;
 				  if (!voiceChannel) {
-					return message.reply('yep.');
+					return message.reply('Mine häälekanalisse.');
 				  }
 			  
 				  try {
@@ -436,7 +433,7 @@ const modal = new ModalBuilder()
 				} else if (command === 'youtube') {
 				  const voiceChannel = message.member.voice.channel;
 				  if (!voiceChannel) {
-					return message.reply('Nop.');
+					return message.reply('Mine häälekanalisse.');
 				  }
 			  
 				  const connection = await joinVoiceChannel({
@@ -447,7 +444,6 @@ const modal = new ModalBuilder()
 			  
 				  const query = args.join(' ');
 				  await playYouTubeVideo(query, connection, message);
-				
 				} else if (command === 'local') {
 					const voiceChannel = message.member.voice.channel;
 					if (!voiceChannel) {
@@ -486,8 +482,7 @@ const modal = new ModalBuilder()
 						message.reply('Erreur lors de la lecture du fichier audio local.');
 					}
 					
-				}
-		
+				}	
 
 			  });
 			  
@@ -496,7 +491,7 @@ const modal = new ModalBuilder()
 				  const videos = await play.search(query, { limit: 1 });
 			  
 				  if (!videos || videos.length === 0) {
-					return message.reply('Videot ei leitud.');
+					return message.reply('Video en lectrure.');
 				  }
 			  
 				  const video = videos[0];
@@ -511,7 +506,7 @@ const modal = new ModalBuilder()
 				  connection.subscribe(player);
 				} catch (err) {
 				  console.error(err);
-				  message.reply('Radio :(');
+				  message.reply('Réagit :(');
 				}
 			  }		
 			  
@@ -526,7 +521,7 @@ const modal = new ModalBuilder()
 					  const videos = await play.search(query, { limit: 1 });
 			  
 					  if (!videos || videos.length === 0) {
-						  return message.reply('Videot ei leitud.');
+						  return message.reply('Video éteinte.');
 					  }
 			  
 					  const video = videos[0];
@@ -549,7 +544,7 @@ const modal = new ModalBuilder()
 					  });
 				  } catch (err) {
 					  console.error(err);
-					  message.reply('Radio :(');
+					  message.reply('Bot musique actif :(');
 				  }
 			  }
 
@@ -560,8 +555,64 @@ const modal = new ModalBuilder()
 				  channelOne.setName(`📊｜Members - ` + serverOne.memberCount, 'AutoMemberCount')
 				}, 10000);
 			  })
+
+			  const clientId = '1182805140202344579';
+			  const guildId = '834895609622167592';
+
+			  const { REST } = require('@discordjs/rest');
+			  const { Routes } = require('discord-api-types/v9');
+			  const commands = require('./commands');
+
+			  const rest = new REST({ version: '9' }).setToken('Your Token');
 			  
+			  (async () => {
+				  try {
+					  console.log('Started refreshing application (/) commands.');
+			  
+					  await rest.put(
+						  Routes.applicationGuildCommands(clientId, guildId),
+						  { body: commands },
+					  );
+			  
+					  console.log('Successfully reloaded application (/) commands.');
+				  } catch (error) {
+					  console.error(error);
+				  }
+			  })();
+			  
+			  client.on('interactionCreate', async interaction => {
+				// Vérifie si l'interaction est une commande
+				if (!interaction.isCommand()) return;
+			
+				// Récupère le nom de la commande
+				const { commandName } = interaction;
+			
+				// Vérifie si la commande est 'help'
+				if (commandName === 'help') {
+					// Répond à l'interaction avec un message plus élaboré
+					await interaction.reply({
+						content: '🚀 ***Bienvenue sur le centre d\'aide*** 🚀\n\n' +
+								 ''+
+								 '** 🥁 Commandes disponibles pour tous les membres ** 🥁\n' +
+								 ''+
+								 '\n**/help** - Aides\n' +
+								 // Ajoute d'autres commandes et descriptions si nécessaire
+			
+								 '\n**🛡️ Commandes disponibles pour le personnel** 🛡️\n' +
+								 ''+
+								 '\n**/raadio** - Lance la radio (utiliser que dans le salon radio)\n' +
+								 '\n**/clear (nombre de messages)** - Enlève les messages dans certains salons.\n' +
+								 '\n**/ban** - Bannir un membre\n' +
+								 // Ajoute d'autres commandes et descriptions pour le personnel si nécessaire
+			
+								 '***\nMerci pour votre patiente.***',
+						ephemeral: true // Rend la réponse visible uniquement pour l'utilisateur qui a déclenché la commande
+					});
+				}
+			});
+			
+			
+					
 
-
-
-             
+					
+						
