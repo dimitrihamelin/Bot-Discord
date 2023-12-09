@@ -19,7 +19,7 @@ Unlock the power of emotions with your Discord bot! Here are some key characteri
 | ❓ **Custom Help Command**| Provide assistance in up to 3 languages with a personalized help command. | 14 | ✅  |
 | 🎵 **Local Music Support**| Enable users to play music from their local libraries. |   14   |   ✅  |
 | ⚙️ **Custom Commands**    | Create customized commands for your bot in up to 3 languages. |   14   |   ✅  |
-| 🎧**MP3 Musics**| Use MP3 directly on your computer or server (VPS, VPN, own device). |   14   |   ✅  |
+| 🎧**MP3 Music**| Use MP3 directly on your computer or server (VPS, VPN, own device). |   14   |   ✅  |
 | 🍓 **Raspberry Pi Support** | Ensure compatibility with Raspberry Pi 3 and 4 for seamless integration. | 14 | ✅  |
 | 🌐 **Custom Status**      | Set and customize your bot's status: Online, Idle, Do Not Disturb, or Streaming. | 14 | ✅  |
 | 🚫 **Anti-Bad Words Filter** | Implement a custom filter to prevent the use of inappropriate language. | 14 | ✅  |
