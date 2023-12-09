@@ -2,11 +2,12 @@
 "Channel":"",
 "roleStaff":"",
 "log":"",
+"rolebot": "", 
 "welcome":"",
 "farewell": "",
 "SERVER": "", 
 "STATUS": "",
 "LIVE": "", 
 "Token": "",
-"prefix": "!"
+"prefix": "!" 
 }
