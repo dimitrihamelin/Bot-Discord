@@ -1,4 +1,4 @@
-let { Channel } = require("../config.json");
+let { Channel } = require("/Users/dimitrihamelin/Desktop/Locarodix/Code/Bot/en/config.json")
 let { EmbedBuilder, ActionRowBuilder, ButtonBuilder } = require("discord.js");
 
 module.exports = {
@@ -24,10 +24,10 @@ module.exports = {
             // Send the new message
             const embed = new EmbedBuilder()
                 .setColor("Random")
-                .setAuthor({ name: `Ticket system`, iconURL: channel.guild.iconURL({ dynamic: true }) })
-                .setDescription("Use this button for help !")
+                .setAuthor({ name: `Système de tickets`, iconURL: channel.guild.iconURL({ dynamic: true }) })
+                .setDescription("Utilisez le bouton ci-dessous pour obtenir de l'aide !")
                 .setThumbnail(channel.guild.iconURL({ dynamic: true }))
-                .setFooter({ text: "Use this button if you have a problem.", iconURL: channel.guild.iconURL({ dynamic: true }) });
+                .setFooter({ text: "Utilisez le bouton pour une action de support", iconURL: channel.guild.iconURL({ dynamic: true }) });
 
             const row = new ActionRowBuilder()
                 .addComponents(
@@ -38,7 +38,7 @@ module.exports = {
                 );
 
             await channel.send({ embeds: [embed], components: [row] });
-            console.log("The ticket was send in the room");
+            console.log("Ticket envoyé sur le canal de messages");
         } catch (error) {
             console.error('Erreur lors de la suppression ou de l\'envoi du message:', error);
         }
