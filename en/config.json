@@ -1,6 +1,7 @@
 {
-"Channel":"",
+"Channel":"", 
 "roleStaff":"",
+"rolebot": "",
 "log":"",
 "welcome":"",
 "farewell": "",
