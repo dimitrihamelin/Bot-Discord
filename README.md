@@ -17,7 +17,7 @@ Unlock the power of emotions with your Discord bot! Here are some key characteri
 | 📻 **Multiple Radios**   | Access different radio stations with your bot. |   14   |   ✅  |
 | 🗑️ **Clear Command**     | Manage clutter with a command to clear messages. |   14   |   ✅  |
 | ❓ **Custom Help Command**| Provide assistance in up to 3 languages with a personalized help command. | 14 | ✅  |
-| 🎵 **Local Music Support**| Enable users to play music from their local libraries.   14   |   ✅  |
+| 🎵 **Local Music Support**| Enable users to play music from their local libraries.   | 14   |   ✅  |
 | ⚙️ **Custom Commands**    | Create customized commands for your bot in up to 3 languages with /cmd |   14   |   ✅  |
 | 🎧**MP3 Music**| Use MP3 directly on your computer or server (VPS, VPN, own device). |   14   |   ✅  |
 | 🍓 **Raspberry Pi Support** | Ensure compatibility with Raspberry Pi 3 and 4 for seamless integration. | 14 | ✅  |
