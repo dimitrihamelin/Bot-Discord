@@ -1,4 +1,4 @@
-# 🚀 Discord Bot Latest Version : 1.9.8
+# 🚀 Discord Bot Latest Version : 1.9.9
 
 Welcome to the frontier of Discord Bot development with version 17 — your gateway to crafting an unparalleled and feature-rich bot for Discord communities! Embark on this exhilarating journey by ensuring that you have the following prerequisites in place : 
 
@@ -6,17 +6,22 @@ Welcome to the frontier of Discord Bot development with version 17 — your gate
 
 Unlock the power of emotions with your Discord bot! Here are some key characteristics :
 
-|      Feature       |          Description           | Version Discord tested | Works |
-|:------------------:|:-----------------------------:|:-------:|:----:|
-| 🎵 **Mutliple Music**   | Host your own music or enjoy 24/7 radio streaming. |   14   |  ✅  |
-| 👥 **Members Counts**| Keep track of your community's growth by counting members. |   14   |  ✅  |
-| 📊 **Commands slashs** | Host your bot in up to 3 languages for a global reach. |   14   |  ❌  |
-| 🌐 **Language Support** | Expand your bot's reach with up to 3 languages. |   14   |  ✅  |
-| 👋 **Welcome** | Greet new members in multiple languages. |   14   |  ✅  |
-| 👋 **Farewell** | Bid farewell to leaving members globally. |   14   |  ✅  |
-| 📻 **Multiple Radios** | Tune in to various radio stations with your bot. |   14   |  ✅  |
-| 🗑️ **Clear Command** | Manage clutter with a command to clear messages. |   14   |  ✅  |
-| ❓ **Custom Help Command** | Provide assistance in up to 3 languages. |   14   |  ❌  |
+|         Feature          |              Description                | Tested Discord Version | Works |
+|:------------------------:|:--------------------------------------:|:-----------------------:|:---------:|
+| 🎵 **Multiple Music**    | Host your own music or enjoy 24/7 radio streaming. |         14          |   ✅  |
+| 👥 **Members Count**     | Track the growth of your community by counting members. |  14  |   ✅  |
+| 📊 **Slash Commands**    | Use slash commands in up to 3 languages for global reach. |   14   |   ✅  |
+| 🌐 **Language Support**  | Expand your bot's reach with support for up to 3 languages. |   14   |   ✅  |
+| 👋 **Welcome Messages**  | Greet new members in multiple languages upon their arrival. |   14   |   ✅  |
+| 🤗 **Farewell Messages** | Bid farewell to departing members with global messages. |   14   |   ✅  |
+| 📻 **Multiple Radios**   | Access different radio stations with your bot. |   14   |   ✅  |
+| 🗑️ **Clear Command**     | Manage clutter with a command to clear messages. |   14   |   ✅  |
+| ❓ **Custom Help Command**| Provide assistance in up to 3 languages with a personalized help command. | 14 | ✅  |
+| 🎵 **Local Music Support**| Enable users to play music from their local libraries. |   14   |   ✅  |
+| ⚙️ **Custom Commands**    | Create customized commands for your bot in up to 3 languages. |   14   |   ✅  |
+| 🍓 **Raspberry Pi Support** | Ensure compatibility with Raspberry Pi 3 and 4 for seamless integration. | 14 | ✅  |
+| 🌐 **Custom Status**      | Set and customize your bot's status: Online, Idle, Do Not Disturb, or Streaming. | 14 | ✅  |
+| 🚫 **Anti-Bad Words Filter** | Implement a custom filter to prevent the use of inappropriate language. | 14 | ✅  |
 
 
 Feel free to modify the language or content to better align with the tone and style that best suits your preferences for documenting your Discord Bot.
