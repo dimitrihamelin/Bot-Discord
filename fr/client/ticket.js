@@ -1,4 +1,4 @@
-let { Channel } = require("/Users/dimitri/Desktop/Locarodix/Code/Bot/fr/config.json")
+let { Channel } = require("/Users/dimitrihamelin/Desktop/Locarodix/Code/Bot/fr/config.json")
 let { EmbedBuilder, ActionRowBuilder, ButtonBuilder } = require("discord.js");
 
 module.exports = {
