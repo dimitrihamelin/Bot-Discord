@@ -51,5 +51,9 @@ brew install ffmpeg
 npm install prism-media
 ```
 
+**Download all the dependencies listed in the console. Launch with Ready.js or main.js.**
+
+
+
 Please feel free to modify the language or content to better align with the tone and style that best suits your preferences for documenting your Discord Bot.
 Also, the you can host 3 times your bot so you will have the langages. Also, you need to know that you can host your own musics or see radio. Count Members. 
