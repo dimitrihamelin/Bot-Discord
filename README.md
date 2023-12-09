@@ -1,4 +1,4 @@
-# 🚀 Discord Bot Latest Version : 1.9.9
+# 🚀 Discord Bot Latest Version : 2.0
 
 Welcome to the frontier of Discord Bot development with version 17 — your gateway to crafting an unparalleled and feature-rich bot for Discord communities! Embark on this exhilarating journey by ensuring that you have the following prerequisites in place : 
 
@@ -22,7 +22,7 @@ Unlock the power of emotions with your Discord bot! Here are some key characteri
 | 🍓 **Raspberry Pi Support** | Ensure compatibility with Raspberry Pi 3 and 4 for seamless integration. | 14 | ✅  |
 | 🌐 **Custom Status**      | Set and customize your bot's status: Online, Idle, Do Not Disturb, or Streaming. | 14 | ✅  |
 | 🚫 **Anti-Bad Words Filter** | Implement a custom filter to prevent the use of inappropriate language. | 14 | ✅  |
-
+| 🔋 **Low Energy Mode**    | Activate low energy mode to conserve power and resources. | 14 | ✅  |
 
 Feel free to modify the language or content to better align with the tone and style that best suits your preferences for documenting your Discord Bot.
 
