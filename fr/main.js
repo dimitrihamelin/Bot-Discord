@@ -2,7 +2,7 @@ let { GatewayIntentBits , Client , Collection, InteractionType ,ModalBuilder, St
 let { readdirSync } = require("fs")
 let IncludedIntents = Object.entries(GatewayIntentBits).reduce((t, [, V]) => t | V, 0)
 let client = new Client({ intents: IncludedIntents })
-let {log, roleStaff, welcome, farewell, STATUS, Token} = require("./config.json")
+let {log, roleStaff, rolebot, welcome, farewell, STATUS, Token} = require("./config.json")
 let db = require("croxydb")
 const ffmpegStatic = require('ffmpeg-static');
 const play = require('play-dl');
@@ -10,7 +10,7 @@ const https = require('https');
 const fs = require('fs');
 const { StreamType } = require('@discordjs/voice');
 require('dotenv').config();
-const FFmpeg = require('/Users/dimitri/Desktop/Locarodix/Code/Bot/fr/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly
+const FFmpeg = require('/Users/dimitrihamelin/Desktop/Locarodix/Code/Bot/fr/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly
 
 client.login(Token).then(console.log("Support FR qui marche")).catch((err) => {console.log("Problème FR")})
 
@@ -138,8 +138,13 @@ const modal = new ModalBuilder()
 					  {
 						  id: roleStaff,
 						  allow: [PermissionsBitField.Flags.ViewChannel]
-					  }
+					  },
+					  {
+					  	 id: rolebot,
+					  		allow: [PermissionsBitField.Flags.ViewChannel]
+					  },
 				  ]
+
 				})
 				
 					  
@@ -245,7 +250,11 @@ const modal = new ModalBuilder()
 				const args = message.content.slice(('' || '').length).trim().split(/ +/);
 				const command = args.shift().toLowerCase();
 			
-				if (command === '/clear' && (message.member.roles.cache.some(role => role.id === '1128408743646871715') || message.member.roles.cache.some(role => role.id === '1128411176963940503'))) {
+				// Définir les ID des salons autorisés
+				const allowedChannels = ['1128669539752743093', '1128824562612703294', '1130960824953995365']; // Remplacez ces ID par les ID de vos salons autorisés
+			
+				// Vérifier si la commande est exécutée dans un salon autorisé
+				if (command === '/clear' && allowedChannels.includes(message.channel.id) && (message.member.roles.cache.some(role => role.id === '1128408743646871715') || message.member.roles.cache.some(role => role.id === '1128411176963940503'))) {
 					const amount = parseInt(args[0]);
 			
 					if (isNaN(amount) || amount < 1 || amount > 100) {
@@ -287,6 +296,7 @@ const modal = new ModalBuilder()
 						}
 					}
 				}
+			
 			
 				// Vérifie si le message est "hello" (insensible à la casse)
 				if (message.content.toLowerCase() === 'hello') {
@@ -349,7 +359,7 @@ const modal = new ModalBuilder()
 				}
 			});
 
-			let prefix= "!"
+			let prefix= "/"
     
 			client.on('messageCreate', (message) => {
 				// Check if the message starts with the command and the user has the specified role
@@ -545,5 +555,64 @@ const modal = new ModalBuilder()
 				  channelOne.setName(`📊｜Membres - ` + serverOne.memberCount, 'AutoMemberCount')
 				}, 10000);
 			  })
-		  
-		  
+
+			  const clientId = '1132431328328036442';
+			  const guildId = '834895609622167592';
+
+			  const { REST } = require('@discordjs/rest');
+			  const { Routes } = require('discord-api-types/v9');
+			  const commands = require('./commands');
+
+			  const rest = new REST({ version: '9' }).setToken('MTEzMjQzMTMyODMyODAzNjQ0Mg.GlOfqY.zHlHT2CxUk0D4fRWgNgKXvxWTu_RXqXYPjJ5w4');
+			  
+			  (async () => {
+				  try {
+					  console.log('Started refreshing application (/) commands.');
+			  
+					  await rest.put(
+						  Routes.applicationGuildCommands(clientId, guildId),
+						  { body: commands },
+					  );
+			  
+					  console.log('Successfully reloaded application (/) commands.');
+				  } catch (error) {
+					  console.error(error);
+				  }
+			  })();
+			  
+			  client.on('interactionCreate', async interaction => {
+				// Vérifie si l'interaction est une commande
+				if (!interaction.isCommand()) return;
+			
+				// Récupère le nom de la commande
+				const { commandName } = interaction;
+			
+				// Vérifie si la commande est 'help'
+				if (commandName === 'help') {
+					// Répond à l'interaction avec un message plus élaboré
+					await interaction.reply({
+						content: '🚀 ***Bienvenue sur le centre d\'aide*** 🚀\n\n' +
+								 ''+
+								 '** 🥁 Commandes disponibles pour tous les membres ** 🥁\n' +
+								 ''+
+								 '\n**/help** - Aides\n' +
+								 // Ajoute d'autres commandes et descriptions si nécessaire
+			
+								 '\n**🛡️ Commandes disponibles pour le personnel** 🛡️\n' +
+								 ''+
+								 '\n**/raadio** - Lance la radio (utiliser que dans le salon radio)\n' +
+								 '\n**/clear (nombre de messages)** - Enlève les messages dans certains salons.\n' +
+								 '\n**/ban** - Bannir un membre\n' +
+								 // Ajoute d'autres commandes et descriptions pour le personnel si nécessaire
+			
+								 '***\nMerci pour votre patiente.***',
+						ephemeral: true // Rend la réponse visible uniquement pour l'utilisateur qui a déclenché la commande
+					});
+				}
+			});
+			
+			
+					
+
+					
+						
