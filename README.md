@@ -53,6 +53,8 @@ npm install prism-media
 npm i sodium
 ```
 
+Sodium or the others issues on the console can work.
+
 **Download all the dependencies listed in the console. Launch with Ready.js or main.js.**
 
 
