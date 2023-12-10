@@ -50,6 +50,7 @@ sudo apt-get update (ubuntu & debian)
 sudo apt-get install ffmpeg (ubuton & debian)
 brew install ffmpeg
 npm install prism-media
+npm i sodium
 ```
 
 **Download all the dependencies listed in the console. Launch with Ready.js or main.js.**
