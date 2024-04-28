@@ -51,13 +51,8 @@ sudo apt-get install ffmpeg (ubuton & debian)
 brew install ffmpeg
 npm install prism-media
 npm i sodium
-
-Indeed (not necessary) : 
-
-npm cache clean --force
-rm -rf node_modules
-npm install
 ```
+Warning : Replace also the path and "your token" in the main page & config.
 
 Sodium or the others issues on the console can work.
 
