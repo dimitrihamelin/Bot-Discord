@@ -52,24 +52,64 @@ brew install ffmpeg
 npm install prism-media
 npm i sodium
 ```
-1. Replace by your files (main.js): 
+**1. Replace by your files (main.js)**
 
 ```bash
 
-const FFmpeg = require('/Users/dimitrihamelin/github/Bot-Discord/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly //here
+require('dotenv').config();
+const FFmpeg = require('/Users/dimitrihamelin/github/Bot-Discord/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly
 
 client.login(Token).then(console.log("Support FR qui marche")).catch((err) => {console.log("Problème FR")}) //here
- 
-let eventFiles = readdirSync('fr/croxydb/').filter(file => file.endsWith('.js')); //here
+
+let eventFiles = readdirSync('/Users/dimitrihamelin/github/Bot-Discord/fr/croxydb').filter(file => file.endsWith('.js')); //here
 
 for (let file of eventFiles) {
-	let event = require(`fr/croxydb/${file}`); //here
+	let event = require(`/Users/dimitrihamelin/github/Bot-Discord/fr/croxydb/${file}`); //here
 	if (event.once) {
 		client.once(event.name, (...args) => event.execute(...args));
 	} else {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
+}
+
 ```
+
+**2. Modify your file config.json** 
+
+```bash
+
+{
+"Channel":"",
+"roleStaff":"",
+"log":"",
+"rolebot": "", 
+"welcome":"",
+"farewell": "",
+"SERVER": "", 
+"STATUS": "",
+"LIVE": "", 
+"Token": "",
+"prefix": "!" 
+}
+
+```
+
+**3. Modify your file main.js for every number** 
+
+```bash
+			  client.on('ready', () => {
+				setInterval(() => {
+				  const serverOne = client.guilds.cache.get('834895609622167592');
+				  const channelOne = serverOne.channels.cache.get('1128741348095295648');
+				  channelOne.setName(`📊｜Membres - ` + serverOne.memberCount, 'AutoMemberCount')
+				}, 10000);
+			  })
+
+			  const clientId = '1132431328328036442';
+			  const guildId = '834895609622167592';
+
+```
+
 
 Warning : Replace also the path and "your token" in the main page & config.
 
