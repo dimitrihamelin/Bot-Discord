@@ -18,7 +18,7 @@ client.login(Token).then(console.log("Support De qui marche")).catch((err) => {c
 
 
 
-let eventFiles = readdirSync('./fr/client').filter(file => file.endsWith('.js'));
+let eventFiles = readdirSync('de/croxydb/').filter(file => file.endsWith('.js'));
 
 for (let file of eventFiles) {
 	let event = require(`de/croxydb/${file}`);

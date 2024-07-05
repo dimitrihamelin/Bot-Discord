@@ -12,14 +12,14 @@ const { StreamType } = require('@discordjs/voice');
 require('dotenv').config();
 const FFmpeg = require('/Users/dimitrihamelin/github/Bot-Discord/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly
 
-client.login(Token).then(console.log("Support FR qui marche")).catch((err) => {console.log("Problème FR")})
+client.login(Token).then(console.log("Support FR qui marche")).catch((err) => {console.log("Problème FR")}) //here
 
 
 
-let eventFiles = readdirSync('fr/croxydb/').filter(file => file.endsWith('.js'));
+let eventFiles = readdirSync('fr/croxydb/').filter(file => file.endsWith('.js')); //here
 
 for (let file of eventFiles) {
-	let event = require(`fr/croxydb/${file}`);
+	let event = require(`fr/croxydb/${file}`); //here
 	if (event.once) {
 		client.once(event.name, (...args) => event.execute(...args));
 	} else {

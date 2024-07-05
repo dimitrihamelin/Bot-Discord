@@ -16,7 +16,7 @@ client.login(Token).then(console.log("Support EN qui marche")).catch((err) => {c
 
 
 
-let eventFiles = readdirSync('/Users/dimitrihamelin/github/Bot-Discord/fr/config.json').filter(file => file.endsWith('.js'));
+let eventFiles = readdirSync('en/croxydb/').filter(file => file.endsWith('.js'));
 
 for (let file of eventFiles) {
 	let event = require(`en/croxydb/${file}`);
