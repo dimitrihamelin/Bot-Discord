@@ -52,7 +52,7 @@ brew install ffmpeg
 npm install prism-media
 npm i sodium
 ```
-#1. Replace by your files (main.js): 
+##1. Replace by your files (main.js): 
 
 ```bash
 
@@ -74,7 +74,7 @@ for (let file of eventFiles) {
 
 ```
 
-#2. Modify your file config.json 
+##2. Modify your file config.json 
 
 Warning : Replace also the path and "your token" in the main page & config.
 
