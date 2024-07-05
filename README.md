@@ -52,7 +52,7 @@ brew install ffmpeg
 npm install prism-media
 npm i sodium
 ```
-**1. Replace by your files (main.js):**
+**1. Replace by your files (main.js)**
 
 ```bash
 
