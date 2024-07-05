@@ -20,6 +20,8 @@ client.login(Token).then(console.log("Support De qui marche")).catch((err) => {c
 
 let eventFiles = readdirSync('/Users/dimitrihamelin/github/Bot-Discord/de/croxydb/').filter(file => file.endsWith('.js'));
 
+//done
+
 for (let file of eventFiles) {
 	let event = require(`de/croxydb/${file}`);
 	if (event.once) {
