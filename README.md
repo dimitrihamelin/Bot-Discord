@@ -76,6 +76,24 @@ for (let file of eventFiles) {
 
 **2. Modify your file config.json** 
 
+```bash
+
+{
+"Channel":"",
+"roleStaff":"",
+"log":"",
+"rolebot": "", 
+"welcome":"",
+"farewell": "",
+"SERVER": "", 
+"STATUS": "",
+"LIVE": "", 
+"Token": "",
+"prefix": "!" 
+}
+
+```
+
 Warning : Replace also the path and "your token" in the main page & config.
 
 Sodium or the others issues on the console can work.
