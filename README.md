@@ -52,6 +52,17 @@ brew install ffmpeg
 npm install prism-media
 npm i sodium
 ```
+
+```bash
+1. Replace by your files (main.js): 
+
+const FFmpeg = require('/Users/dimitrihamelin/github/Bot-Discord/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly
+
+let eventFiles = readdirSync('/Users/dimitrihamelin/github/Bot-Discord/fr/config.json').filter(file => file.endsWith('.js'));
+
+let event = require(`/Users/dimitrihamelin/github/Bot-Discord/fr/config.json/${file}`);
+```
+
 Warning : Replace also the path and "your token" in the main page & config.
 
 Sodium or the others issues on the console can work.
