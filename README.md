@@ -94,6 +94,23 @@ for (let file of eventFiles) {
 
 ```
 
+**3. Modify your file main.js for every number** 
+
+```bash
+			  client.on('ready', () => {
+				setInterval(() => {
+				  const serverOne = client.guilds.cache.get('834895609622167592');
+				  const channelOne = serverOne.channels.cache.get('1128741348095295648');
+				  channelOne.setName(`📊｜Membres - ` + serverOne.memberCount, 'AutoMemberCount')
+				}, 10000);
+			  })
+
+			  const clientId = '1132431328328036442';
+			  const guildId = '834895609622167592';
+
+```
+
+
 Warning : Replace also the path and "your token" in the main page & config.
 
 Sodium or the others issues on the console can work.
