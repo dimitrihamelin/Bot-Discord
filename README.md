@@ -56,11 +56,17 @@ npm i sodium
 
 ```bash
 
-const FFmpeg = require('/Users/dimitrihamelin/github/Bot-Discord/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly
+client.login(Token).then(console.log("Support FR qui marche")).catch((err) => {console.log("Problème FR")}) //here
+ 
+let eventFiles = readdirSync('fr/croxydb/').filter(file => file.endsWith('.js')); //here
 
-let eventFiles = readdirSync('/Users/dimitrihamelin/github/Bot-Discord/fr/config.json').filter(file => file.endsWith('.js'));
-
-let event = require(`/Users/dimitrihamelin/github/Bot-Discord/fr/config.json/${file}`);
+for (let file of eventFiles) {
+	let event = require(`fr/croxydb/${file}`); //here
+	if (event.once) {
+		client.once(event.name, (...args) => event.execute(...args));
+	} else {
+		client.on(event.name, (...args) => event.execute(...args));
+	}
 ```
 
 Warning : Replace also the path and "your token" in the main page & config.
