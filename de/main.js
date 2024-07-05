@@ -10,7 +10,7 @@ const https = require('https');
 const fs = require('fs');
 const { StreamType } = require('@discordjs/voice');
 require('dotenv').config();
-const FFmpeg = require('/Users/dimitrihamelin/Desktop/Locarodix/Code/Bot/fr/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly
+const FFmpeg = require('/Users/dimitrihamelin/github/Bot-Discord/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly
 
 prefix = "!"
 
@@ -18,10 +18,10 @@ client.login(Token).then(console.log("Support De qui marche")).catch((err) => {c
 
 
 
-let eventFiles = readdirSync('./Client').filter(file => file.endsWith('.js'));
+let eventFiles = readdirSync('/Users/dimitrihamelin/github/Bot-Discord/fr/config.json').filter(file => file.endsWith('.js'));
 
 for (let file of eventFiles) {
-	let event = require(`./Client/${file}`);
+	let event = require(`/Users/dimitrihamelin/github/Bot-Discord/fr/config.json/${file}`);
 	if (event.once) {
 		client.once(event.name, (...args) => event.execute(...args));
 	} else {
