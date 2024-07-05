@@ -108,6 +108,8 @@ for (let file of eventFiles) {
 			  const clientId = '1132431328328036442';
 			  const guildId = '834895609622167592';
 
+const rest = new REST({ version: '9' }).setToken('Your Token');
+
 ```
 
 
