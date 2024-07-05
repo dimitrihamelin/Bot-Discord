@@ -10,7 +10,7 @@ const https = require('https');
 const fs = require('fs');
 const { StreamType } = require('@discordjs/voice');
 require('dotenv').config();
-const FFmpeg = require('/Users/dimitrihamelin/Desktop/Locarodix/Code/Bot/fr/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly
+const FFmpeg = require('/Users/dimitrihamelin/github/Bot-Discord/node_modules/prism-media/src/core/FFmpeg.js'); // Adjust the path accordingly
 
 client.login(Token).then(console.log("Support FR qui marche")).catch((err) => {console.log("Problème FR")})
 

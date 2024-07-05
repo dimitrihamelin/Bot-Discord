@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@discordjs/voice": "^0.17.0",
+    "croxydb": "^0.0.24",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "ffmpeg-static": "^5.2.0",
+    "play-dl": "^1.9.7"
+  }
+}
