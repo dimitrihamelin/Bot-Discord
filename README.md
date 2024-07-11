@@ -1,4 +1,4 @@
-# 🚀 Discord Bot Latest Version : 2.0
+# 🚀 Discord Bot Latest Version : 2.1
 
 Welcome to the frontier of Discord Bot development with version 17.0 — your gateway to crafting an unparalleled and feature-rich bot for Discord communities! Embark on this exhilarating journey by ensuring that you have the following prerequisites in place : 
 
@@ -107,6 +107,8 @@ for (let file of eventFiles) {
 
 			  const clientId = '1132431328328036442';
 			  const guildId = '834895609622167592';
+
+const rest = new REST({ version: '9' }).setToken('Your Token');
 
 ```
 
