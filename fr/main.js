@@ -297,7 +297,28 @@ const modal = new ModalBuilder()
 					}
 				}
 			
-			
+
+				// Vérifie si le message est "hello" (insensible à la casse)
+				if (message.content.toLowerCase() === 'hey') {
+					// Réagit au message avec un emoji (par exemple, 👋)
+					try {
+						await message.react('👋');
+					} catch (error) {
+						console.error('Erreur lors de l\'ajout de la réaction :', error);
+						message.reply('Error adding reaction. Please try again later.');
+					}
+				}  
+							// Vérifie si le message est "hello" (insensible à la casse)
+				if (message.content.toLowerCase() === 'Sallut') {
+					// Réagit au message avec un emoji (par exemple, 👋)
+					try {
+						await message.react('👋');
+					} catch (error) {
+						console.error('Erreur lors de l\'ajout de la réaction :', error);
+						message.reply('Error adding reaction. Please try again later.');
+					}
+				}  
+
 				// Vérifie si le message est "hello" (insensible à la casse)
 				if (message.content.toLowerCase() === 'hello') {
 					// Réagit au message avec un emoji (par exemple, 👋)
@@ -365,7 +386,7 @@ const modal = new ModalBuilder()
 				// Check if the message starts with the command and the user has the specified role
 				if (message.content.startsWith(`${prefix}yourCommand`)) {
 					// Check if the user has the specified role
-					if (message.member.roles.cache.has('1128408743646871715')) {
+					if (message.member.roles.cache.has('1236381801153302640')) {
 						// User has the role, allow the command
 						// Your command logic here
 					} else {
@@ -556,8 +577,8 @@ const modal = new ModalBuilder()
 			  const { Routes } = require('discord-api-types/v9');
 			  const commands = require('./commands');
 
-			  const rest = new REST({ version: '9' }).setToken('Your Token');
-			  
+			  const rest = new REST({ version: '9' }).setToken('MTEzMjQzMTMyODMyODAzNjQ0Mg.GOCrr0.mgbgyYgAX22bgUTrCSfB9b3spYq-qZvrZf8eHM');
+
 			  (async () => {
 				  try {
 					  console.log('Started refreshing application (/) commands.');

@@ -1,13 +1,14 @@
 {
-"Channel":"",
-"roleStaff":"",
-"log":"",
-"rolebot": "", 
-"welcome":"",
-"farewell": "",
-"SERVER": "", 
+"Channel":"1128669784456822856",
+"roleStaff":"1132313552443682868",
+"rolebot": "1128432853391257781",
+"log":"1180264438432022569",
+"welcome":"1128422919895257198",
+"farewell": "1180991368722645082",
+"SERVER": "834895609622167592", 
 "STATUS": "",
 "LIVE": "", 
-"Token": "",
-"prefix": "!" 
+"Token": "MTEzMjQzMTMyODMyODAzNjQ0Mg.GOCrr0.mgbgyYgAX22bgUTrCSfB9b3spYq-qZvrZf8eHM",
+"predix": "!"
 }
+
