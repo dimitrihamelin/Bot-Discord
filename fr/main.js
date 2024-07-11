@@ -295,6 +295,8 @@ const modal = new ModalBuilder()
 						}
 					}
 				}
+
+				//test
 			
 				if (message.content.toLowerCase() === 'app') {
 					try {

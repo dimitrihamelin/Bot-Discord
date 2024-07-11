@@ -287,7 +287,7 @@ const modal = new ModalBuilder()
 								message.reply('Error replying to message. Please try again later.');
 							}
 						}						
-			
+					//test
 						// Vérification avant de répondre au message
 						if (message.reference && message.reference.messageId) {
 							const referencedMessage = await message.channel.messages.fetch(message.reference.messageId);

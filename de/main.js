@@ -309,7 +309,7 @@ const modal = new ModalBuilder()
 					}
 				}
 				
-			
+					//test
 				// Vérifie si le message est "hello" (insensible à la casse)
 				if (message.content.toLowerCase() === 'hello') {
 					// Réagit au message avec un emoji (par exemple, 👋)
