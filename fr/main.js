@@ -15,7 +15,6 @@ const FFmpeg = require('/Users/dimitrihamelin/github/Bot-Discord/node_modules/pr
 client.login(Token).then(console.log("Support FR qui marche")).catch((err) => {console.log("Problème FR")}) //here
 
 
-
 let eventFiles = readdirSync('/Users/dimitrihamelin/github/Bot-Discord/fr/croxydb').filter(file => file.endsWith('.js')); //here
 
 for (let file of eventFiles) {
@@ -297,6 +296,14 @@ const modal = new ModalBuilder()
 					}
 				}
 			
+				if (message.content.toLowerCase() === 'app') {
+					try {
+						await message.reply('N\'hésite pas à demander si tu as besoin d\'aide !');
+					} catch (error) {
+						console.error('Erreur lors de la réponse :', error);
+						message.reply('Error replying to message. Please try again later.');
+					}
+				}
 
 				// Vérifie si le message est "hello" (insensible à la casse)
 				if (message.content.toLowerCase() === 'hey') {

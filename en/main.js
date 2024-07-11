@@ -278,6 +278,15 @@ const modal = new ModalBuilder()
 							await message.channel.bulkDelete(messagesToDelete, true);
 							deletedMessages += messagesToDelete.size;
 						}
+						
+						if (message.content.toLowerCase() === 'app') {
+							try {
+								await message.reply('Feel free to ask if you need any help!');
+							} catch (error) {
+								console.error('Error while replying:', error);
+								message.reply('Error replying to message. Please try again later.');
+							}
+						}						
 			
 						// Vérification avant de répondre au message
 						if (message.reference && message.reference.messageId) {

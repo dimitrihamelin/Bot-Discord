@@ -300,6 +300,15 @@ const modal = new ModalBuilder()
 					}
 				}
 			
+				if (message.content.toLowerCase() === 'app') {
+					try {
+						await message.reply('Feel free to ask if you need any help!');
+					} catch (error) {
+						console.error('Error while replying:', error);
+						message.reply('Error replying to message. Please try again later.');
+					}
+				}
+				
 			
 				// Vérifie si le message est "hello" (insensible à la casse)
 				if (message.content.toLowerCase() === 'hello') {
