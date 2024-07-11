@@ -15,6 +15,7 @@ Unlock the power of emotions with your Discord bot! Here are some key characteri
 | 👋 **Welcome Messages**  | Greet new members in multiple languages upon their arrival. |   14   |   ✅  |
 | 🤗 **Farewell Messages** | Bid farewell to departing members with global messages. |   14   |   ✅  |
 | 📻 **Multiple Radios**   | Access different radio stations with your bot. |   14   |   ✅  |
+| 🥰 **Reply Messages**    | Send messages to users with your bot. |   14   |   ✅  |
 | 🗑️ **Clear Command**     | Manage clutter with a command to clear messages. |   14   |   ✅  |
 | ❓**Custom Help Command**| Provide assistance in up to 3 languages with a personalized help command. | 14 | ✅  |
 | 🎵 **Local Music Support**| Enable users to play music from their local libraries.   | 14   |   ✅  |
